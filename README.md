@@ -86,21 +86,25 @@ java PaintMSApp
 <h3 style="font-size: 26px; font-weight: 700;">🟦 1. Smooth Freehand Drawing</h3>
 
 Challenge: Raw mouse events produce jagged, sharp lines.
+
 Solution: Uses Graphics2D anti-aliasing + continuous stroke sampling for smooth, natural curves.
 
 <h3 style="font-size: 26px; font-weight: 700;">🟩 2. Efficient Repainting</h3>
 
 Challenge: Swing repaint cycles can flicker when drawing rapidly.
+
 Solution: Uses an off-screen buffer + minimal repaint logic to eliminate flicker.
 
 <h3 style="font-size: 26px; font-weight: 700;">🟨 3. Undo Stack in a Single File</h3>
 
 Challenge: No multi-class architecture to organize states.
+
 Solution: Stores canvas snapshots and restores them on demand — a simple but real undo mechanism.
 
 <h3 style="font-size: 26px; font-weight: 700;">🟥 4. Tool Switching (Brush ↔ Eraser)</h3>
 
 Challenge: Tools must work differently while sharing rendering logic.
+
 Solution: Centralized flags manage tool mode cleanly without adding complexity.
 
 <h2 style="font-size: 34px; font-weight: 800;">🌟 Future Enhancements</h2>
