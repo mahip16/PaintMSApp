@@ -126,5 +126,7 @@ Solution: Centralized flags manage tool mode cleanly without adding complexity.
 <h2 style="font-size: 34px; font-weight: 800;">👤 Author</h2>
 
 Mahi Patel
+
 Computer Science @ Toronto Metropolitan University
+
 GitHub: github.com/mahip16
