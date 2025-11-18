@@ -1,78 +1,109 @@
-🎨 PaintMSApp
+<h1 style="font-size: 40px; font-weight: 800; margin-bottom: 0;">🎨 PaintMSApp</h1>
+<span style="font-size: 20px;">A single-file Java Swing drawing application demonstrating real UI engineering, Graphics2D rendering, and event-driven design.</span>
 
-A single-file Java Swing drawing application demonstrating real UI engineering, event-driven design, Graphics2D rendering, and practical state management, all built without external libraries.
+PaintMSApp is a fully interactive desktop drawing tool written entirely in one Java file. It showcases professional GUI development, rendering pipelines, event handling, and state management without relying on external libraries.
 
-🚀 Project Summary
+<h2 style="font-size: 34px; font-weight: 800;">🚀 Project Summary</h2>
 
-PaintMSApp is a fully interactive desktop drawing tool written in one Java file. It showcases GUI development, rendering pipelines, event handling, and application state management. The project demonstrates how to organize input handling, drawing logic, undo behavior, and brush customization within a clean and efficient structure.
+PaintMSApp demonstrates how to organize input handling, drawing logic, undo behavior, and dynamic brush customization inside a clean single-file structure.
+It highlights your understanding of rendering pipelines, Swing event listeners, and stateful UI programming.
 
-✨ Features
+<h2 style="font-size: 34px; font-weight: 800;">✨ Features</h2>
 
-- Smooth freehand drawing using Graphics2D
+- Smooth freehand drawing with Graphics2D
+
 - Adjustable brush size
+
 - Custom color picker
+
 - Eraser tool
-- Clear canvas option
-- Basic undo support
-- Responsive Swing UI
 
-🧠 Engineering Highlights
+- Clear canvas button
 
-- Event-driven architecture using Swing mouse listeners
-- Anti-aliased Graphics2D rendering for smooth strokes
-- Internal buffer-based repainting for flicker-free drawing
-- Centralized state management for color, brush, tool mode, and undo history
-- Clean and maintainable single-file structure that remains readable and extensible
+- Basic undo functionality
 
-🛠️ Tech Used
+- Responsive, flicker-free Swing UI
+
+<h2 style="font-size: 34px; font-weight: 800;">🧠 Engineering Highlights</h2>
+<h3 style="font-size: 26px; font-weight: 700;">🎯 Event-Driven Architecture</h3>
+
+- Built using Swing mouse listeners for stroke tracking
+
+- Real-time rendering pipeline for smooth drawing
+
+
+<h3 style="font-size: 26px; font-weight: 700;">🖌️ Graphics2D Rendering</h3>
+
+- Anti-aliased strokes
+
+- Smooth curves using continuous mouse sampling
+
+
+<h3 style="font-size: 26px; font-weight: 700;">🧵 Internal Buffering</h3>
+
+- Off-screen buffer prevents flickering
+
+- Only redraws necessary segments
+
+
+<h3 style="font-size: 26px; font-weight: 700;">📦 Centralized State Management</h3>
+
+- Brush color, size, mode, and undo history in one unified manager
+
+- Maintains single-file readability
+
+
+<h2 style="font-size: 34px; font-weight: 800;">🛠️ Tech Used</h2>
 
 - Java
+
 - Swing / AWT
+
 - Graphics2D
+
 - Mouse event listeners
+
 - Custom rendering loop
 
-▶️ How to Run
+- Double buffering
+
+
+<h2 style="font-size: 34px; font-weight: 800;">▶️ How to Run</h2>
 
 Download or clone the file:
-
 PaintMSApp.java
 
 Compile:
 
 javac PaintMSApp.java
 
+
 Run:
 
 java PaintMSApp
 
-🧩 Technical Challenges & Solutions
+<h2 style="font-size: 34px; font-weight: 800;">🧩 Technical Challenges & Solutions</h2>
+<h3 style="font-size: 26px; font-weight: 700;">🟦 1. Smooth Freehand Drawing</h3>
 
-🟦 1. Smooth freehand drawing
+Challenge: Raw mouse events produce jagged, sharp lines.
+Solution: Uses Graphics2D anti-aliasing + continuous stroke sampling for smooth, natural curves.
 
-Challenge: Raw mouse events draw jagged lines.
+<h3 style="font-size: 26px; font-weight: 700;">🟩 2. Efficient Repainting</h3>
 
-Solution: Uses Graphics2D with anti-aliasing and continuous stroke sampling to produce smooth curves.
+Challenge: Swing repaint cycles can flicker when drawing rapidly.
+Solution: Uses an off-screen buffer + minimal repaint logic to eliminate flicker.
 
-🟩 2. Efficient repainting
+<h3 style="font-size: 26px; font-weight: 700;">🟨 3. Undo Stack in a Single File</h3>
 
-Challenge: Swing repaints can flicker if mismanaged.
+Challenge: No multi-class architecture to organize states.
+Solution: Stores canvas snapshots and restores them on demand — a simple but real undo mechanism.
 
-Solution: Maintains an off-screen buffer and redraws only the necessary portions during strokes.
+<h3 style="font-size: 26px; font-weight: 700;">🟥 4. Tool Switching (Brush ↔ Eraser)</h3>
 
-🟨 3. Undo stack in a single-file structure
+Challenge: Tools must work differently while sharing rendering logic.
+Solution: Centralized flags manage tool mode cleanly without adding complexity.
 
-Challenge: No complex class structure.
-
-Solution: Stores snapshots/states and restores them on command. Simple, but real and effective state control.
-
-🟥 4. Tool switching (brush ↔ eraser)
-
-Challenge: Tools must behave differently but share logic.
-
-Solution: Centralized state flags handle tool decisions cleanly without overcomplication.
-
-🌟 Future Enhancements
+<h2 style="font-size: 34px; font-weight: 800;">🌟 Future Enhancements</h2>
 
 - Save canvas as PNG/JPG
 
@@ -82,8 +113,14 @@ Solution: Centralized state flags handle tool decisions cleanly without overcomp
 
 - Brush presets
 
-- Layers system
+- Layers
 
 - Image import
 
 - Keyboard shortcuts
+
+<h2 style="font-size: 34px; font-weight: 800;">👤 Author</h2>
+
+Mahi Patel
+Computer Science @ Toronto Metropolitan University
+GitHub: github.com/mahip16
